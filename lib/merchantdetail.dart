@@ -111,7 +111,7 @@ class MerchantDetail extends StatelessWidget {
               delegate: SliverChildListDelegate([   
             Text("Event Sekarang",textAlign: TextAlign.left,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
         
-             Event(null,null),
+             Event(),
              Divider(thickness: 10,),
               Text("Ulasan",textAlign: TextAlign.left,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             ListView.builder(

@@ -66,6 +66,7 @@ class Akun extends StatelessWidget {
               contentPadding: EdgeInsets.all(4),
               onTap: (){
                 restapi.setboolean(false);
+                
                 namainputcontroller.text=restapi.getuser().nama ;
                 emailinputcontroller.text=restapi.getuser().email ;
                 nomorinputcontroller.text=restapi.getuser().telpon ;
@@ -90,6 +91,7 @@ class Akun extends StatelessWidget {
               ),
               contentPadding: EdgeInsets.all(4),
               onTap:(){
+                
                   keluar(context);
               }  ,
             ),

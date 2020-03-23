@@ -5,11 +5,18 @@ import 'package:test2/model/berita.dart';
 
 
 class Restapi with ChangeNotifier {
+  int _userid;
+  getuserid() => _userid;
+  void setuserid(var _iduser) {
+    _userid = _iduser;
+    notifyListeners();
+  }
   User _user;
   getuser() => _user;
 
   void setuser(User val) {
     _user = val;
+    setuserid(val.id);
     notifyListeners();
   }
 
@@ -49,6 +56,15 @@ bool _booll = true;
     notifyListeners();
   }
 
+ List _agendaikuti;
+  getagendaikuti() => _agendaikuti;
+  void setagendaikuti(List val) {
+    _agendaikuti = val;
+    notifyListeners();
+  }
+ 
+ 
+ 
   List _agenda;
   getinfoagenda() => _agenda;
   void setagenda(List val) {

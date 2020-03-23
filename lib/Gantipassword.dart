@@ -10,6 +10,7 @@ class Gantipass extends StatelessWidget {
       appBar: AppBar(
         title: Text('Ganti Password'),
       ),
+      floatingActionButton: gantiButton,
       body: SingleChildScrollView(
               child: Container(
               color: Colors.orange,
@@ -21,16 +22,15 @@ class Gantipass extends StatelessWidget {
                 autovalidate: autoValidate,
         child: Column(
               children: <Widget>[
-                password,
+                passwordlama,
                 SizedBox(height: 24.0),
                 passwordbaru,
                 SizedBox(height: 24.0),
                 passwordver,
                 SizedBox(height: 24.0),
-                gantiButton
+                
               ],
             ),
-            // height: ,
           ),
         ),
       ),

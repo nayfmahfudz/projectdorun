@@ -18,6 +18,7 @@ class _EditProfileState extends State<EditProfile> {
             title: Text("Edit Profile"),
           ),
           body: SingleChildScrollView(
+            physics: ScrollPhysics(),
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -77,14 +78,17 @@ Padding(
           
     ),
                          Container(
-                  child: Column(
-                    children: <Widget>[        
+                            child:Form(
+                key: formKey3,
+                autovalidate: autoValidate,
+        child: ListView(
+          shrinkWrap: true,
+          padding: EdgeInsets.only(left: 24.0, right: 24.0),
+          children: <Widget> [     
               nama,
               SizedBox(height: 24.0),
               email,
               SizedBox(height: 24.0),
-              // password,  
-              // SizedBox(height: 24.0),
               alamat,
               SizedBox(height: 24.0),
               nomor,
@@ -92,7 +96,7 @@ Padding(
               
               editButton,
                     ])
-              ),],
+              ))]
                       )));
   }
 }

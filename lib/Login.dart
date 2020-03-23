@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+// import 'package:test2/util/dbhelper.dart';
 import 'form.dart';
 import 'fom.dart';
 import 'provider/Restapi.dart';
+import 'util/dbhelpernaszaki.dart';
 
 
 class Login extends StatefulWidget {
@@ -11,8 +13,6 @@ class Login extends StatefulWidget {
 }
 
 class LoginState extends State<Login> {
-var emailcontroller=new TextEditingController();
-var passcontroller=new TextEditingController();
 
 void toggle() {
     setState(() {
@@ -23,12 +23,10 @@ void toggle() {
   @override
   Widget build(BuildContext context) {
   final Restapi restapi = Provider.of<Restapi>(context);
-  
-   final logo = Image.asset("gambar/dorun-orange-2.png",
+   final  logo = Image.asset("gambar/dorun-orange-2.png",
    height: 100,
    width: 300,
-     
-   )   ;
+       ) ; 
       
 
     return Scaffold(
@@ -43,7 +41,7 @@ void toggle() {
           children: <Widget>[
             logo,
             SizedBox(height: 24.0),
-            email,
+            nama,
             SizedBox(height: 8.0),
             password,
             SizedBox(height: 24.0),
